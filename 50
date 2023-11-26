@@ -1,0 +1,43 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+
+    int height, width;
+
+    cout << "輸入城牆寬度，高度";
+    cin >> width >> height;
+
+    for (int i = 0; i < height; i++)
+    {
+        if (i == 0)
+        {
+            for (int j = 0; j < width; j++)
+            {
+                cout << "*";
+            }
+        }
+        if (i < (height - 2))
+        {
+            cout << endl;
+            cout << "*";
+            for (int j = 0; j < (width - 2); j++)
+            {
+                cout << " ";
+            }
+            cout << "*";
+        }
+        else if (i == (height - 1))
+        {
+            cout << endl;
+            for (int j = 0; j < width; j++)
+            {
+                cout << "*";
+            }
+        }
+    }
+
+    return 0;
+}
